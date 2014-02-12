@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2014 Vishal Disawar
+  ~
+  ~ Dual licensed under Apache2.0 and MIT Open Source License (included below):
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.coursera.cardswap">
+
+    <!-- We need to get permission to use the phone's NFC -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <!-- This meta-data only allows NFC to occur in the activity where we created the
+        callbacks. Otherwise the NFC beam will occur in any activity-->
+        <meta-data
+            android:name="android.nfc.disable_beam_default"
+            android:value="true" />
+
+        <activity
+            android:name="com.coursera.cardswap.CardSwap"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coursera.cardswap.CardEdit"
+            android:label="@string/title_activity_card_edit"/>
+        <!-- The theme, "Holo.Light.Dialog", shows this activity as a dialog box -->
+        <activity
+            android:name="com.coursera.cardswap.ContactReceive"
+            android:label="@string/title_activity_contact_receive"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <!-- We need to add this intent filter in order to launch this activity from an NFC beam
+            by specifying the NDEF_DISCOVERED action-->
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- the data is going to have the id/tag of "application/com.coursera.cardswap" -->
+                <data android:mimeType="application/com.coursera.cardswap" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

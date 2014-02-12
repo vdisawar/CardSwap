@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CardSwapCoursera</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="sample_name">John LastName</string>
+    <string name="sample_business">CEO at CardSwap</string>
+    <string name="sample_email">email@example.com</string>
+    <string name="sample_website">www.linkedin.com/johnlastname</string>
+    <string name="sample_address">123 Fake St</string>
+    <string name="sample_citystate">Silicon Valley, CA 90101</string>
+    <string name="sample_number">123-456-7890</string>
+    <string name="intro_text"><![CDATA[Welcome to CardSwap. CardSwap is an app that stores your personal business card and allows you to share it with others via NFC. To get started, select the edit action above.]]></string>
+    <string name="sample_title">Sample Business Card</string>
+    <string name="title_activity_card_edit">CardEdit</string>
+    <string name="cardedit_title">Personal Information</string>
+    <string name="input_name_hint">Name</string>
+    <string name="input_business_hint">Business, Job, and/or Title</string>
+    <string name="input_address_hint">Address</string>
+    <string name="input_city_hint">City</string>
+    <string name="input_state_hint">State (2 Letter Initial)</string>
+    <string name="input_zipcode_hint">Zip Code</string>
+    <string name="input_number_hint">Phone Number</string>
+    <string name="input_email_hint">Email Address</string>
+    <string name="input_website_hint">Website or LinkedIn</string>
+    <string name="card_edit_button_done">Done</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="receive_person_contact_string">You are receiving the contact information for </string>
+    <string name="contact_accept_question_string">Add to Contacts?</string>
+    <string name="title_activity_recieve_contact">RecieveContact</string>
+    <string name="title_activity_contact_receive">ContactReceive</string>
+    <string name="contact_receive_info">You are receiving the contact information for</string>
+    <string name="contact_accept_question">Do you accept and want to add to your contacts?</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="edit_card">Edit Card</string>
+
+</resources>
