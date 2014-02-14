@@ -1,0 +1,1 @@
+CardSwap is an android app that allows for you to create and edit you business card. To share your business card with another person, simply tap your phone with the other and transfer your information via NFC.
